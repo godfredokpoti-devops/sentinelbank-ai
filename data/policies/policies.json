@@ -1,0 +1,34 @@
+[
+  {
+    "document_id": "AML-POL-001",
+    "title": "Transaction Monitoring Standard",
+    "section": "5.2",
+    "jurisdiction": "US",
+    "classification": "internal",
+    "text": "Analysts should review material deviations from established customer transaction behavior, including unexpected increases in value, velocity, geographic reach, and newly added beneficiaries. Alerts must be evaluated using available customer context and documented evidence."
+  },
+  {
+    "document_id": "KYC-POL-004",
+    "title": "Customer Due Diligence Standard",
+    "section": "4.1",
+    "jurisdiction": "US",
+    "classification": "internal",
+    "text": "Customer risk reviews should consider customer profile, expected activity, geography, products used, beneficial ownership information, and material changes in behavior. Higher-risk observations may require enhanced due diligence and documented analyst review."
+  },
+  {
+    "document_id": "AI-GOV-002",
+    "title": "AI-Assisted Investigation Standard",
+    "section": "3.3",
+    "jurisdiction": "GLOBAL",
+    "classification": "internal",
+    "text": "Generative AI output used in a risk investigation is advisory. The system must preserve source evidence, identify the model used, avoid autonomous consequential actions, and require qualified human review before final case disposition."
+  },
+  {
+    "document_id": "DATA-SEC-007",
+    "title": "Sensitive Data Handling Standard",
+    "section": "6.4",
+    "jurisdiction": "GLOBAL",
+    "classification": "internal",
+    "text": "Applications must minimize sensitive information shared with external processing services. Access to protected information must follow least privilege, approved purpose, logging, encryption, and retention requirements."
+  }
+]

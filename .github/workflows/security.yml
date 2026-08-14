@@ -1,0 +1,16 @@
+name: Security
+on:
+  pull_request:
+  workflow_dispatch:
+jobs:
+  dependency-review:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check repository for committed secrets
+        run: |
+          if grep -RIE --exclude-dir=.git '(AKIA[0-9A-Z]{16}|-----BEGIN (RSA|EC|OPENSSH) PRIVATE KEY-----)' .; then
+            echo 'Potential secret detected'; exit 1
+          fi

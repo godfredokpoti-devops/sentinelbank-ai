@@ -1,0 +1,28 @@
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      DATABASE_URL: postgresql+psycopg://sentinel:sentinel@db:5432/sentinelbank
+      MODEL_PROVIDER: local
+      API_KEY: dev-analyst-key
+    depends_on:
+      db:
+        condition: service_healthy
+    command: sh -c "python scripts/seed.py && uvicorn app.main:app --host 0.0.0.0 --port 8000"
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: sentinel
+      POSTGRES_PASSWORD: sentinel
+      POSTGRES_DB: sentinelbank
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U sentinel"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+    volumes:
+      - sentinel-db:/var/lib/postgresql/data
+volumes:
+  sentinel-db:

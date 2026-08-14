@@ -1,0 +1,18 @@
+{
+  "customers": [
+    {"customer_ref":"CUST-1042","full_name":"Jordan Ellis","country":"US","risk_rating":"MEDIUM","pep":false},
+    {"customer_ref":"CUST-2088","full_name":"Morgan Reed","country":"US","risk_rating":"LOW","pep":false}
+  ],
+  "cases": [
+    {"case_ref":"CASE-1001","customer_ref":"CUST-1042","status":"OPEN"},
+    {"case_ref":"CASE-1002","customer_ref":"CUST-2088","status":"OPEN"}
+  ],
+  "transactions": [
+    {"tx_ref":"TX-100293","customer_ref":"CUST-1042","amount":12500,"currency":"USD","beneficiary":"Northstar Trading","beneficiary_country":"GB","is_new_beneficiary":true,"occurred_at":"2026-08-03T10:15:00"},
+    {"tx_ref":"TX-100301","customer_ref":"CUST-1042","amount":9800,"currency":"USD","beneficiary":"Alpine Commerce","beneficiary_country":"DE","is_new_beneficiary":true,"occurred_at":"2026-08-05T14:20:00"},
+    {"tx_ref":"TX-100315","customer_ref":"CUST-1042","amount":15450,"currency":"USD","beneficiary":"Meridian Import Co","beneficiary_country":"AE","is_new_beneficiary":true,"occurred_at":"2026-08-07T16:45:00"},
+    {"tx_ref":"TX-100322","customer_ref":"CUST-1042","amount":11000,"currency":"USD","beneficiary":"Northstar Trading","beneficiary_country":"GB","is_new_beneficiary":true,"occurred_at":"2026-08-09T09:10:00"},
+    {"tx_ref":"TX-200101","customer_ref":"CUST-2088","amount":840,"currency":"USD","beneficiary":"Home Services LLC","beneficiary_country":"US","is_new_beneficiary":false,"occurred_at":"2026-08-02T11:00:00"},
+    {"tx_ref":"TX-200102","customer_ref":"CUST-2088","amount":1250,"currency":"USD","beneficiary":"Office Supply Co","beneficiary_country":"US","is_new_beneficiary":false,"occurred_at":"2026-08-08T11:00:00"}
+  ]
+}
